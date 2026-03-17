@@ -18,71 +18,52 @@ class CustomArrayServiceTest {
 
     @Test
     void testFindMin() throws CustomArrayException {
-        // given
         CustomArray array = new CustomArray(SAMPLE_DATA);
-        // when
         int result = service.findMin(array);
-        // then
         assertEquals(EXPECTED_MIN, result);
     }
 
     @Test
     void testFindMax() throws CustomArrayException {
-        // given
         CustomArray array = new CustomArray(SAMPLE_DATA);
-        // when
         int result = service.findMax(array);
-        // then
         assertEquals(EXPECTED_MAX, result);
     }
 
     @Test
     void testCalculateSum() throws CustomArrayException {
-        // given
         CustomArray array = new CustomArray(SAMPLE_DATA);
-        // when
         long result = service.calculateSum(array);
-        // then
         assertEquals(EXPECTED_SUM, result);
     }
 
     @Test
     void testSortBubble() throws CustomArrayException {
-        // given
         CustomArray array = new CustomArray(SAMPLE_DATA);
-        // when
         CustomArray result = service.sortBubble(array);
-        // then
         assertArrayEquals(SORTED_DATA, result.getData());
     }
 
     @Test
     void testSortSelection() throws CustomArrayException {
-        // given
         CustomArray array = new CustomArray(SAMPLE_DATA);
-        // when
         CustomArray result = service.sortSelection(array);
-        // then
         assertArrayEquals(SORTED_DATA, result.getData());
     }
 
     @Test
     void testFindMinThrowsOnNull() {
-        // given / when / then
         assertThrows(CustomArrayException.class, () -> service.findMin(null));
     }
 
     @Test
     void testFindMaxThrowsOnNull() {
-        // given / when / then
         assertThrows(CustomArrayException.class, () -> service.findMax(null));
     }
 
     @Test
     void testFindMinThrowsOnEmpty() {
-        // given
         CustomArray array = new CustomArray(new int[]{});
-        // when / then
         assertThrows(CustomArrayException.class, () -> service.findMin(array));
     }
 }

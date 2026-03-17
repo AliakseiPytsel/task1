@@ -16,71 +16,50 @@ class CustomArrayValidatorTest {
 
     @Test
     void testValidLineSemicolon() {
-        // given
         String line = VALID_LINE_SEMICOLON;
-        // when
         boolean result = validator.isValidLine(line);
-        // then
         assertTrue(result);
     }
 
     @Test
     void testValidLineSpaces() {
-        // given
         String line = VALID_LINE_SPACES;
-        // when
         boolean result = validator.isValidLine(line);
-        // then
         assertTrue(result);
     }
 
     @Test
     void testValidLineDashes() {
-        // given
         String line = VALID_LINE_DASHES;
-        // when
         boolean result = validator.isValidLine(line);
-        // then
         assertTrue(result);
     }
 
     @Test
     void testInvalidLineWithLetters() {
-        // given
         String line = INVALID_LINE_LETTERS;
-        // when
         boolean result = validator.isValidLine(line);
-        // then
         assertFalse(result);
     }
 
     @Test
     void testInvalidLineMixed() {
-        // given
         String line = INVALID_LINE_MIXED;
-        // when
         boolean result = validator.isValidLine(line);
-        // then
         assertFalse(result);
     }
 
     @Test
     void testNullLine() {
-        // given
         String line = null;
-        // when
         boolean result = validator.isValidLine(line);
-        // then
         assertFalse(result);
     }
 
     @Test
     void testEmptyLine() {
-        // given
         String line = "";
-        // when
         boolean result = validator.isValidLine(line);
-        // then
         assertFalse(result);
     }
 }

@@ -1,7 +1,6 @@
 package com.example.array.comparator;
 
 import com.example.array.entity.CustomArray;
-
 import java.util.Comparator;
 
 public class ArrayComparators {
