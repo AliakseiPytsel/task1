@@ -12,11 +12,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class CustomArrayRepository implements ArrayRepository {
-
     private static final Logger logger = LogManager.getLogger(CustomArrayRepository.class);
-
     private static CustomArrayRepository instance;
-
     private final List<CustomArray> arrays = new ArrayList<>();
 
     private CustomArrayRepository() {

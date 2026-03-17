@@ -16,9 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomArrayReader implements ArrayReader {
-
     private static final Logger logger = LogManager.getLogger(CustomArrayReader.class);
-
     private static final String DELIMITER_REGEX = "[;,\\-\\s]+";
 
     private final ArrayValidator validator = new CustomArrayValidator();

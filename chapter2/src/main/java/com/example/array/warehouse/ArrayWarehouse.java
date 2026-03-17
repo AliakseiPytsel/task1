@@ -8,12 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ArrayWarehouse {
-
     private static final Logger logger = LogManager.getLogger(ArrayWarehouse.class);
-
     private static ArrayWarehouse instance;
-
-    // Ключ — id массива, значение — статистика
     private final Map<String, ArrayStatistics> storage = new HashMap<>();
 
     private ArrayWarehouse() {

@@ -6,11 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class WarehouseObserver implements ArrayObserver {
-
     private static final Logger logger = LogManager.getLogger(WarehouseObserver.class);
-
     private final ArrayWarehouse warehouse;
-
     public WarehouseObserver(ArrayWarehouse warehouse) {
         this.warehouse = warehouse;
     }
